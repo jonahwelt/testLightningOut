@@ -1,0 +1,31 @@
+<html>
+<script src="https://raptor-medport-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+<!-- <script src="https://raptor-medport-dev-ed.lightning.force.com/lightning/page/home/lightning/lightning.out.js"></script> -->
+<div data-lightning-out="true"></div>
+
+    <script>
+        const appName = 'c:lightningOutTestApp';
+        const componentName = "c:appointmentCalendar";
+        const lightningEndPoint = "https://raptor-medport-dev-ed.lightning.force.com";
+        const targetElement = document.querySelector("[data-lightning-out]")
+        const componentAttributes{
+
+        };
+
+        $Lightning.use(
+            appName,
+            function (){
+                $Lightning.createComponent(
+                    compoennetName,
+                    componentAttributes,
+                    targetElement,
+                    function(cmp){
+                        console.log('lightning component created');
+                    }
+                );
+            },
+            lightningEndPoint
+        );
+
+    </script>
+</html>
